@@ -1,8 +1,32 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title>Test Page</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Bolt - Main Menu</title>
+
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="/css/shared.css" rel="stylesheet">
 </head>
 <body>
-Begin here (or replace this with any static code already written).
+	<nav class="navbar navbar-default">
+		<a href="#" class="glyphicon glyphicon-th-list navbar-text"></a>
+		<h1 class="navbar-text">Main Menu</h1>
+	</nav>
+		
+	<div class="container">
+		{{#each menu}}
+		<div class="menu" id="{{id}}">
+			<a href="{{path}}" class="thumbnail">
+				<img src="images/{{image}}">
+				<h2>{{name}}</h2>
+			</a>
+		</div>
+		{{/each}}
+	</div>
+
+	<script src="bootstrap.min.js"></script>
 </body>
 </html>
