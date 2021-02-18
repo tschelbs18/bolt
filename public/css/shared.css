@@ -18,11 +18,24 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    align-items: stretch;
 }
 
 .menu {
     flex: 1 0 40%;
     margin: 2em;
+    width: 30%;
+}
+
+.thumbnail {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.thumbnail > img {
+    flex-grow: 1;
+    width: 30%;
 }
 
 h2 {
