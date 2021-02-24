@@ -10,6 +10,8 @@ var handlebars = require('express3-handlebars')
 
 var index = require('./routes/index');
 var runScreen = require('./routes/runScreen');
+var musicSandbox = require('./routes/musicSandbox');
+var voiceSandbox = require('./routes/voiceSandbox');
 // Example route
 // var user = require('./routes/user');
 
