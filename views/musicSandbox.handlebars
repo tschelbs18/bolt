@@ -13,21 +13,16 @@
 <body>
     <nav class="navbar navbar-default">
 		<a href="." class="navbar-text">< Back</a>
-		<h1 class="navbar-text">Say these commands!</h1>
+		<h1 class="navbar-text">Music Sandbox</h1>
 	</nav>
 
 	</header>
 	<div class="container">
-		{{#each actions}}
-		<div class="menu" id="{{id}}">
-			<a href="{{path}}" class="thumbnail">
-				<img src="{{image}}">
-				<h2>{{name}}</h2>
-			</a>
-		</div>
-		{{/each}}
 	</div>
-
+  <iframe src="https://open.spotify.com/embed/playlist/2Hx23qjKMsUDgJxzfIdB5i"
+    width="300" height="380" frameborder="0"
+    allowtransparency="true" allow="encrypted-media">
+  </iframe>
     <script src="/js/bootstrap.min.js"></script>
 </body>
 </html>
