@@ -232,22 +232,23 @@ $(function()
         } else if (command == 'back') {
           selectTrack(-1);
         } else if (command == 'louder') {
-          if (audio.volume >= 0.9) {
+          if (audio.volume >= 0.8) {
             audio.volume = 1;
           } else {
-            audio.volume += 0.1;
+            audio.volume += 0.2;
           }
         } else if (command == 'softer') {
-          if (audio.volume <= 0.1) {
+          if (audio.volume <= 0.2) {
             audio.volume = 0;
           }
           else {
-            audio.volume -= 0.1;
+            audio.volume -= 0.2;
           }
         } else if (command == 'mute') {
           audio.volume = 0;
         } else if (command == 'hype') {
-          currIndex = 5;
+          currIndex = 1;
+          selectTrack(1);
         }
         $('#command').val('');
       });
