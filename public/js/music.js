@@ -8,7 +8,7 @@ $(document).ready(function() {
 function initializePage() {
 	console.log("Page ready");
  	//initPlayer();
-  initCommandForm();
+  //initCommandForm();
 }
 
 $(function()
@@ -219,6 +219,40 @@ $(function()
         }
     }
 
+    // init RSVP form submit listener
+    function initCommandForm() {
+      $('#user-input').submit(function(e) {
+        e.preventDefault();
+        var command = $('#command').val();
+        console.log(command);
+        if (command == 'pause' || command == 'play'){
+          playPause();
+        } else if (command == 'skip') {
+          selectTrack(1);
+        } else if (command == 'back') {
+          selectTrack(-1);
+        } else if (command == 'louder') {
+          if (audio.volume >= 0.9) {
+            audio.volume = 1;
+          } else {
+            audio.volume += 0.1;
+          }
+        } else if (command == 'softer') {
+          if (audio.volume <= 0.1) {
+            audio.volume = 0;
+          }
+          else {
+            audio.volume -= 0.1;
+          }
+        } else if (command == 'mute') {
+          audio.volume = 0;
+        } else if (command == 'hype') {
+          currIndex = 5;
+        }
+        $('#command').val('');
+      });
+    }
+
     function initPlayer()
 	{
         audio = new Audio();
@@ -242,17 +276,5 @@ $(function()
 	}
 
 	initPlayer();
+  initCommandForm();
 });
-
-// init RSVP form submit listener
-function initCommandForm() {
-  $('#user-input').submit(function(e) {
-    e.preventDefault();
-    var command = $('#command').val();
-    console.log(command);
-    if (command == 'pause'){
-      playPause();
-    }
-    $('#command').val('');
-  });
-}
