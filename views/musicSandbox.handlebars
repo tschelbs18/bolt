@@ -4,25 +4,87 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bolt - Run Screen</title>
-
+    <title>Bolt Music Sandbox</title>
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.3.1/css/all.css'>
     <link href="/css/bootstrap.min.css" rel="stylesheet">
-	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
-	<link href="/css/shared.css" rel="stylesheet">
+	  <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+	  <link href="/css/shared.css" rel="stylesheet">
+    <link href="/css/music.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/music.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-default">
-		<a href="." class="navbar-text">< Back</a>
+		<a href="/" class="navbar-text">< Home</a>
 		<h1 class="navbar-text">Music Sandbox</h1>
 	</nav>
 
 	</header>
 	<div class="container">
+    <!--
     <iframe src="https://open.spotify.com/embed/playlist/2Hx23qjKMsUDgJxzfIdB5i"
       width="300" height="380" frameborder="0"
       allowtransparency="true" allow="encrypted-media">
     </iframe>
+    -->
+    <form id="user-input">
+      <label for="command">Enter Command:</label><br>
+      <input type="text" id="command" name="inputcommand"><br>
+      <input type="submit" value="Submit">
+    </form>
+    <p>
+      play, pause, skip, back, louder, softer, hype
+    </p>
+
+    <div id="app-cover">
+      <!--
+        <div id="bg-artwork"></div>
+        <div id="bg-layer"></div>
+      <-->
+        <div id="player">
+            <div id="player-track">
+                <div id="album-name"></div>
+                <div id="track-name"></div>
+                <div id="track-time">
+                    <div id="current-time"></div>
+                    <div id="track-length"></div>
+                </div>
+                <div id="s-area">
+                    <div id="ins-time"></div>
+                    <div id="s-hover"></div>
+                    <div id="seek-bar"></div>
+                </div>
+            </div>
+            <div id="player-content">
+                <div id="album-art">
+                    <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_1.jpg" class="active" id="_1">
+                    <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_2.jpg" id="_2">
+                    <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_3.jpg" id="_3">
+                    <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_4.jpg" id="_4">
+                    <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_5.jpg" id="_5">
+                    <div id="buffer-box">Buffering ...</div>
+                </div>
+                <div id="player-controls">
+                    <div class="control">
+                        <div class="button" id="play-previous">
+                            <i class="fas fa-backward"></i>
+                        </div>
+                    </div>
+                    <div class="control">
+                        <div class="button" id="play-pause-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="control">
+                        <div class="button" id="play-next">
+                            <i class="fas fa-forward"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
   </div>
-    <script src="/js/bootstrap.min.js"></script>
 </body>
 </html>
