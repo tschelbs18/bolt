@@ -189,8 +189,8 @@ body
 {
     position: absolute;
     top: -40px;
-    width: 115px;
-    height: 85px;
+    width: 90px;
+    height: 90px;
     margin-left: 40px;
     transform: rotateZ(0);
     transition: 0.3s ease all;
@@ -201,7 +201,7 @@ body
 
 #album-art.active
 {
-    top: -60px;
+    top: -75px;
     box-shadow: 0 0 0 4px #fff7f7, 0 30px 50px -15px #afb7c1;
 }
 
@@ -295,9 +295,9 @@ body
 
 #player-controls
 {
-    width: 250px;
+    width: 290px;
     height: 100%;
-    margin: 0 5px 0 141px;
+    margin: 0 5px 0 5px;
     float: right;
     overflow: hidden;
 }
@@ -306,12 +306,11 @@ body
 {
     width: 33.333%;
     float: left;
-    padding: 12px 0;
+    padding: 26px 0;
 }
 
 .button
 {
-    width: 26px;
     height: 26px;
     padding: 25px;
     background-color: #fff;
@@ -325,7 +324,7 @@ body
     color: #d6dee7;
     font-size: 26px;
     text-align: center;
-    line-height: 1;
+    line-height: 0;
 }
 
 .button, .button i
