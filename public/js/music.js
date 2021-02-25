@@ -219,6 +219,61 @@ $(function()
         }
     }
 
+    function initSpeech() {
+
+      // new speech recognition object
+      var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
+      var recognition = new SpeechRecognition();
+      recognition.continuous = true;
+      //recognition.interimResults = true;
+
+      // This runs when the speech recognition service starts
+      recognition.onstart = function() {
+
+      };
+
+      recognition.onend = function() {
+          recognition.start();
+          console.log("speech rec restarted");
+      }
+
+      // This runs when the speech recognition service returns result
+      recognition.onresult = function(event) {
+          var command = event.results[event.results.length - 1][0].transcript.trim();
+          var confidence = event.results[event.results.length - 1][0].confidence;
+          console.log(command);
+          if (command == 'pause' || command == 'play'){
+            playPause();
+          } else if (command == 'skip') {
+            selectTrack(1);
+          } else if (command == 'back') {
+            selectTrack(-1);
+          } else if (command == 'louder') {
+            if (audio.volume >= 0.8) {
+              audio.volume = 1;
+            } else {
+              audio.volume += 0.2;
+            }
+          } else if (command == 'softer') {
+            if (audio.volume <= 0.2) {
+              audio.volume = 0;
+            }
+            else {
+              audio.volume -= 0.2;
+            }
+          } else if (command == 'mute') {
+            audio.volume = 0;
+          } else if (command == 'hype' || command == "let's go" ) {
+            currIndex = 1;
+            selectTrack(1);
+          }
+
+      };
+
+       // start recognition
+       recognition.start();
+    }
+
     // init RSVP form submit listener
     function initCommandForm() {
       $('#user-input').submit(function(e) {
@@ -278,4 +333,5 @@ $(function()
 
 	initPlayer();
   initCommandForm();
+  initSpeech();
 });
