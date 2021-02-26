@@ -266,6 +266,8 @@ $(function()
           } else if (command == 'hype' || command == "let's go" ) {
             currIndex = 1;
             selectTrack(1);
+          } else if (command == "finish" || "end run" || "finish run") {
+            window.location.replace("../finished_run");
           }
 
       };
@@ -301,9 +303,11 @@ $(function()
           }
         } else if (command == 'mute') {
           audio.volume = 0;
-        } else if (command == 'hype') {
+        } else if (command == 'hype' || command == "let's go" ) {
           currIndex = 1;
           selectTrack(1);
+        } else if (command == "finish" || "end run" || "finish run") {
+          window.location.replace("../finished_run");
         }
         $('#command').val('');
       });
