@@ -1,0 +1,81 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bolt - Login And Registration</title>
+
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <link rel="stylesheet" href="../css/login_style.css">
+</head>
+<body>
+  <div class="hero">
+  <div class="form-box">
+    <div class="button-box">
+      <div id="btn"></div>
+      <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+      <button type="button" class="toggle-btn" onclick="register()">Register</button>
+    </div>
+    <div class="social-icons">
+      {{#each alternativeLogins}}
+        <a href="/home">
+          <img id="{{name}}-login" src="{{icon}}">
+        </a>
+      {{/each}}
+    </div>
+    <form id="login" class="input-group">
+      <input type="text" class="input-field" placeholder="User ID" required>
+      <input type="text" class="input-field" placeholder="Enter Password" required>
+      <input type="checkbox" class="check-box"><span>Remember Password</span>
+      <button type="submit" class="submit-btn">Log In</button>
+    </form>
+    <form id="register" class="input-group">
+      <input type="text" class="input-field" placeholder="User ID" required>
+      <input type="email" class="input-field" placeholder="Email" required>
+      <input type="text" class="input-field" placeholder="Enter Password" required>
+      <input type="checkbox" class="check-box"><span>I agree to the terms & conditions</span>
+      <button class="submit-btn">Register</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function() {
+    initEverything();
+  });
+
+  var x = document.getElementById("login");
+  var y = document.getElementById("register");
+  var z = document.getElementById("btn");
+
+  function register(){
+    x.style.left = "-400px";
+    y.style.left = "50px"
+    z.style.left = "110px"
+  }
+  function login(){
+    x.style.left = "50px";
+    y.style.left = "450px"
+    z.style.left = "0px"
+  }
+
+  function initEverything() {
+    $('#register > .submit-btn').click(function (e) {
+      e.preventDefault();
+      if ($('#register > input:invalid').length === 0) {
+        window.location.href = '/home';
+      } else {
+        return false;
+      }
+    });
+
+    $('#login > .submit-btn').click(function (e) {
+      e.preventDefault();
+      if ($('#login > input:invalid').length === 0) {
+        window.location.href = '/home';
+      }
+    });
+  }
+</script>
+</body>
+</html>

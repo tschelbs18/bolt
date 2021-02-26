@@ -1,4 +1,12 @@
 {
+    "altLoginOptions": [
+        {"name": "facebook",
+         "icon": "../images/fb.png"},
+        {"name": "twitter",
+         "icon": "../images/tw.png"},
+        {"name": "google",
+         "icon": "../images/gp.png"}
+    ],
     "settings": {
         "possibleHype": [
             {"name": "default_hype",

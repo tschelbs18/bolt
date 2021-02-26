@@ -8,7 +8,8 @@ var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars')
 
-var index = require('./routes/index');
+var login = require('./routes/login');
+var home = require('./routes/home');
 var runScreen = require('./routes/runScreen');
 var musicSandbox = require('./routes/musicSandbox');
 var settings = require('./routes/settings');
@@ -42,7 +43,8 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-app.get('/', index.view);
+app.get('/', login.view);
+app.get('/home', home.view);
 app.get('/start_run', runScreen.view);
 app.get('/music_sandbox', musicSandbox.view);
 app.get('/settings', settings.view);
@@ -52,8 +54,6 @@ app.get('/routes', routes.view);
 
 // Example route
 // app.get('/users', user.list);
-
-app.get('/settings', settings.view);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
