@@ -29,23 +29,41 @@
 
     "settings": {
         "possibleHype": [
-            {"name": "default_hype",
+            {"name": "Kaaze - Electro Boy",
              "selected": true},
-            {"name": "custom_hype",
+            {"name": "Skylike - Dawn",
+             "selected": false},
+            {"name": "Alex Skrindo - Me & You",
+             "selected": false},
+            {"name": "Jordan Schor - Home",
+             "selected": false},
+            {"name": "Martin Garrix - Proxy",
              "selected": false}
         ],
 
         "possiblePlaylist": [
-            {"name": "default_playlist",
-             "selected": false},
-            {"name": "custom_playlist",
+            {"name": "Default",
              "selected": true}
         ],
 
         "audio_feedback": {
-            "Distance": true,
-            "Pace": true,
-            "Time": true
+            "distance": {
+                "enabled": true,
+                "description": "I want Bolt to tell me my total distance every kilometer/mile"
+            },
+            "pace": {
+                "enabled": true,
+                "description": "I want Bolt to tell me my pace at every kilometer/mile"
+            },
+            "time": {
+                "enabled": true,
+                "description": "I want Bolt to tell me every 10 minutes how long I've been running"
+            }
+        },
+
+        "metric": {
+            "Miles": true,
+            "Kilometers": false
         }
     }
 }

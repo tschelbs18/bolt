@@ -17,9 +17,23 @@
 	</nav>
 		
 	<div class="container">
-        <div id="hype-selector">
-            <label for="hype">Choose a hype song:</label>
-            <select name="hype" id="hype">
+        <form>
+            <div id="playlist-selector">
+                <label for="playlist">Select a playlist to listen to during your run:</label>
+                <select name="playlist" id="playlist">
+                    {{#each settings.possiblePlaylist}}
+                        {{#if selected}}
+                            <option value="{{name}}" selected="">{{name}}</option>
+                        {{else}}
+                            <option value="{{name}}">{{name}}</option>
+                        {{/if}}
+                    {{/each}}
+                </select>
+            </div>
+            <br>
+            <div id="hype-selector">
+                <label for="hype">Choose a specific hype song for added motivation:</label>
+                <select name="hype" id="hype">
                 {{#each settings.possibleHype}}
                     {{#if selected}}
                         <option value="{{name}}" selected="">{{name}}</option>
@@ -27,42 +41,43 @@
                         <option value="{{name}}">{{name}}</option>
                     {{/if}}
                 {{/each}}
-            </select>
-        </div>
-
-        <div id="playlist-selector">
-            <label for="playlist">Choose a playlist:</label>
-            <select name="playlist" id="playlist">
-                {{#each settings.possiblePlaylist}}
-                    {{#if selected}}
-                        <option value="{{name}}" selected="">{{name}}</option>
-                    {{else}}
-                        <option value="{{name}}">{{name}}</option>
-                    {{/if}}
-                {{/each}}
-            </select>
-        </div>
-
-        <div id="audio-feedback">
+                </select>
+            </div>
+            <br>
+            <div id="audio-feedback">
             {{#each settings.audio_feedback}}
-                {{#if this}}
+                {{#if enabled}}
                     <input type="checkbox" id="{{@key}}" name="{{@key}}" checked>
                 {{else}}
                     <input type="checkbox" id="{{@key}}" name="{{@key}}">
                 {{/if}}
-                <label for="{{@key}}">{{@key}}</label>
+                <label for="{{@key}}">{{description}}</label>
+                <br>
             {{/each}}
-        </div>
-
-        <div class="btn-toolbar" role="toolbar">
-            <div class="btn-group" role="group">
-                <button type="button" class="btn btn-default">Save</button>
             </div>
-            <div class="btn-group" role="group">
-                <button type="button" class="btn btn-default">Cancel</button>
+            <br>
+            <div id="metric-selection">
+                <label for="distance">Select miles or kilometers for Bolt to track your distance</label>
+                <select name="distance" id="distance">
+                {{#each settings.metric}}
+                    {{#if this}}
+                        <option value="{{@key}}" selected="">{{@key}}</option>
+                    {{else}}
+                        <option value="{{@key}}">{{@key}}</option>
+                    {{/if}}
+                {{/each}}
+                </select>
             </div>
-        </div>
-	</div>
+            <div class="btn-toolbar" role="toolbar">
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default">Save</button>
+                </div>
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default">Cancel</button>
+                </div>
+            </div>
+        </form>
+    </div>
 
     <script src="https://code.jquery.com/jquery.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
