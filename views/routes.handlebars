@@ -12,18 +12,19 @@
 </head>
 <body>
     <nav class="navbar navbar-default">
-		<a href="." class="navbar-text">< Back</a>
-		<h1 class="navbar-text">Checkout local routes!</h1>
+		<a href="/home" class="navbar-text">< Back</a>
+		<h1 class="navbar-text">Nearby Routes</h1>
 	</nav>
 
-	</header>
 	<div class="container">
 		{{#each routes}}
-    <h3>{{Name}}</h3>
-    <ul>
-      <li>Distance: {{Distance}}</li>
-      <li>Surface: {{Surface}}</li>
-    </ul>
+    <div class="menu">
+      <h3>{{Name}}</h3>
+      <ul>
+        <li>Distance: {{Distance}}</li>
+        <li>Surface: {{Surface}}</li>
+      </ul>
+    </div>
 		{{/each}}
     <img src="/images/route_locations.jpg" alt="Routes">
 	</div>

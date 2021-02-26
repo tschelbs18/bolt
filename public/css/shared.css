@@ -8,6 +8,10 @@ header {
     padding: 0.5em;
 }
 
+.navbar-text {
+    display: inline;
+}
+
 h1 {
     position: absolute;
     left: 50%;
