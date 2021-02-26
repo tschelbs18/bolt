@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Bolt - Settings Page</title>
+
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="/css/shared.css" rel="stylesheet">
+</head>
+<body>
+	<nav class="navbar navbar-default">
+		<a href="." class="navbar-text">< Back</a>
+		<h1 class="navbar-text">Settings</h1>
+	</nav>
+		
+	<div class="container">
+        <div id="hype-selector">
+            <label for="hype">Choose a hype song:</label>
+            <select name="hype" id="hype">
+                {{#each settings.possibleHype}}
+                    {{#if selected}}
+                        <option value="{{name}}" selected="">{{name}}</option>
+                    {{else}}
+                        <option value="{{name}}">{{name}}</option>
+                    {{/if}}
+                {{/each}}
+            </select>
+        </div>
+
+        <div id="playlist-selector">
+            <label for="playlist">Choose a playlist:</label>
+            <select name="playlist" id="playlist">
+                {{#each settings.possiblePlaylist}}
+                    {{#if selected}}
+                        <option value="{{name}}" selected="">{{name}}</option>
+                    {{else}}
+                        <option value="{{name}}">{{name}}</option>
+                    {{/if}}
+                {{/each}}
+            </select>
+        </div>
+
+        <div id="audio-feedback">
+            {{#each settings.audio_feedback}}
+                {{#if this}}
+                    <input type="checkbox" id="{{@key}}" name="{{@key}}" checked>
+                {{else}}
+                    <input type="checkbox" id="{{@key}}" name="{{@key}}">
+                {{/if}}
+                <label for="{{@key}}">{{@key}}</label>
+            {{/each}}
+        </div>
+
+        <div class="btn-toolbar" role="toolbar">
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default">Save</button>
+            </div>
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default">Cancel</button>
+            </div>
+        </div>
+	</div>
+
+	<script src="/js/bootstrap.min.js"></script>
+</body>
+</html>

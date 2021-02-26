@@ -1,0 +1,23 @@
+{
+    "settings": {
+        "possibleHype": [
+            {"name": "default_hype",
+             "selected": true},
+            {"name": "custom_hype",
+             "selected": false}
+        ],
+
+        "possiblePlaylist": [
+            {"name": "default_playlist",
+             "selected": false},
+            {"name": "custom_playlist",
+             "selected": true}
+        ],
+
+        "audio_feedback": {
+            "Distance": true,
+            "Pace": true,
+            "Time": true
+        }
+    }
+}
