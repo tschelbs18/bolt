@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bolt - Run Screen</title>
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="/css/shared.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-default">
+		<a href="." class="navbar-text">< Back</a>
+		<h1 class="navbar-text">My Settings</h1>
+	</nav>
+
+	</header>
+	<div class="container">
+    <form action="./" method="get">
+      <label for="playlist">Select a playlist to listen to during your run (currently default only):</label>
+      <select name="playlist">
+        <option value="Default">{{testuser.current_playlist}}</option>
+      </select>
+      <br>
+      <label for="hype_song">Choose a specific hype song for added motivation:</label>
+      <select name="hype_song">
+        <option value="Kaaze - Electro Boy">{{testuser.hype_song}}</option>
+        <option value="Skylike - Dawn">Skylike - Dawn</option>
+        <option value="Alex Skrindo - Me & You">Alex Skrindo - Me & You</option>
+        <option value="Jordan Schor - Home">Jordan Schor - Home</option>
+        <option value="Martin Garrix - Proxy">Martin Garrix - Proxy</option>
+      </select>
+      <br>
+      <input type="checkbox" name="distance_audio" value={{testuser.distance_audio}} checked={{testuser.distance_audio}}>
+      <label for="distance_audio"> I want Bolt to tell me my total distance at every mile</label><br>
+      <input type="checkbox" name="pace_audio" value={{testuser.pace_audio}} checked={{testuser.pace_audio}}>
+      <label for="pace_audio"> I want Bolt to tell me my pace at every mile</label><br>
+      <input type="checkbox" name="time_audio" value={{testuser.time_audio}} checked={{testuser.time_audio}}>
+      <label for="time_audio"> I want Bolt to tell me every 10 minutes how long I've been running</label>
+      <br>
+      <label for="distance">Select miles or kilometers for Bolt to track your distance:</label>
+      <select name="distance">
+        <option value="{{testuser.distance_metric}}">{{testuser.distance_metric}}</option>
+        <option value="Kilometers">Kilometers</option>
+      </select>
+      <br>
+      <input type="submit" value="Save">
+    </form>
+	</div>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+</body>
+</html>
