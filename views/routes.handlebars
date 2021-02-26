@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bolt - Run Screen</title>
+    <title>Bolt - Nearby Routes</title>
 
     <link href="/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
@@ -13,19 +13,19 @@
 <body>
     <nav class="navbar navbar-default">
 		<a href="." class="navbar-text">< Back</a>
-		<h1 class="navbar-text">Say these commands!</h1>
+		<h1 class="navbar-text">Checkout local routes!</h1>
 	</nav>
 
 	</header>
 	<div class="container">
-		{{#each actions}}
-		<div class="menu" id="{{id}}">
-			<a href="{{path}}" class="thumbnail">
-				<img src="{{image}}">
-				<h2>{{name}}</h2>
-			</a>
-		</div>
+		{{#each routes}}
+    <h3>{{Name}}</h3>
+    <ul>
+      <li>Distance: {{Distance}}</li>
+      <li>Surface: {{Surface}}</li>
+    </ul>
 		{{/each}}
+    <img src="/images/route_locations.jpg" alt="Routes">
 	</div>
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="/js/bootstrap.min.js"></script>
