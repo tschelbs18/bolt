@@ -8,13 +8,17 @@ header {
     padding: 0.5em;
 }
 
+.navbar-text {
+    display: inline;
+}
+
 h1 {
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0);
 }
 
-.flex-container {
+.container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
