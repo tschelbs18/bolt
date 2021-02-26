@@ -52,6 +52,8 @@ app.get('/finished_run', finishedRun.view);
 app.get('/past_runs', pastRuns.view);
 app.get('/routes', routes.view);
 
+app.post('/saveSettings', settings.saveSettings);
+
 // Example route
 // app.get('/users', user.list);
 
