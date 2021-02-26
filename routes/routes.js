@@ -1,9 +1,9 @@
-/**
- * GET Run Screen
+var data = {};
+/*
+ * GET nearby routes page.
  */
 
-const jsonData = require('../public/js/data.json');
-
-exports.view = function(req, res) {
-    res.render('settings', { settings: jsonData.settings });
+exports.view = function(req, res){
+    res.render('routes', {data
+    });
 }
