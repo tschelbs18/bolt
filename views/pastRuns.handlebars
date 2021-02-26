@@ -13,18 +13,18 @@
 <body>
     <nav class="navbar navbar-default">
 		<a href="." class="navbar-text">< Back</a>
-		<h1 class="navbar-text">Say these commands!</h1>
+		<h1 class="navbar-text">Your past runs</h1>
 	</nav>
 
 	</header>
 	<div class="container">
-		{{#each actions}}
-		<div class="menu" id="{{id}}">
-			<a href="{{path}}" class="thumbnail">
-				<img src="{{image}}">
-				<h2>{{name}}</h2>
-			</a>
-		</div>
+    {{#each runs}}
+    <h3>{{Date}}</h3>
+    <ul>
+      <li>Time: {{Time}}</li>
+      <li>Distance: {{Distance}}</li>
+      <li>Pace: {{Pace}}</li>
+    </ul>
 		{{/each}}
 	</div>
     <script src="https://code.jquery.com/jquery.js"></script>
