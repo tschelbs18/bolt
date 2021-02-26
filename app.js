@@ -10,7 +10,13 @@ var handlebars = require('express3-handlebars')
 
 var index = require('./routes/index');
 var runScreen = require('./routes/runScreen');
-var settings = require('./routes/settings.js');
+var musicSandbox = require('./routes/musicSandbox');
+var settings = require('./routes/settings');
+var finishedRun = require('./routes/finishedRun');
+var pastRuns = require('./routes/pastRuns');
+var routes = require('./routes/routes');
+
+
 // Example route
 // var user = require('./routes/user');
 
@@ -38,6 +44,12 @@ if ('development' == app.get('env')) {
 
 app.get('/', index.view);
 app.get('/start_run', runScreen.view);
+app.get('/music_sandbox', musicSandbox.view);
+app.get('/settings', settings.view);
+app.get('/finished_run', finishedRun.view);
+app.get('/past_runs', pastRuns.view);
+app.get('/routes', routes.view);
+
 // Example route
 // app.get('/users', user.list);
 
