@@ -13,19 +13,21 @@
 <body>
     <nav class="navbar navbar-default">
 		<a href="/home" class="navbar-text">< Back</a>
-		<h1 class="navbar-text">Say these commands!</h1>
+		<h1 class="navbar-text">Previous Runs</h1>
 	</nav>
 
 	</header>
 	<div class="container">
     {{#each runs}}
-    <h3>{{Date}}</h3>
-    <ul>
-      <li>Time: {{Time}}</li>
-      <li>Distance: {{Distance}}</li>
-      <li>Pace: {{Pace}}</li>
-    </ul>
-		{{/each}}
+        <div class="menu">
+            <h3>{{Date}}</h3>
+            <ul>
+            <li>Time: {{Time}}</li>
+            <li>Distance: {{Distance}}</li>
+            <li>Pace: {{Pace}}</li>
+            </ul>
+        </div>
+    {{/each}}
 	</div>
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="/js/bootstrap.min.js"></script>

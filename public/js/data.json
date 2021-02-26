@@ -92,5 +92,46 @@
         {"id": "play-prev-song",
             "image": "https://cdn.iconscout.com/icon/free/png-128/back-1438835-1214522.png",
             "name": "Back"}
-    ]
+    ],
+
+    "pastRuns": [
+        {"Date": "2/26/2021",
+         "Time": "33:29",
+         "Distance": "3.81 miles",
+         "Pace" : "8:47 per mile"},
+        {"Date": "2/20/2021",
+         "Time": "45:12",
+         "Distance": "9.43 miles",
+         "Pace" : "4:48 per mile"},
+        {"Date": "2/15/2021",
+         "Time": "27:45",
+         "Distance": "3.90 miles",
+         "Pace" : "7:07 per mile"},
+        {"Date": "2/13/2021",
+         "Time": "1:00:00",
+         "Distance": "6 miles",
+         "Pace" : "10:00 per mile"},
+        {"Date": "2/12/2021",
+         "Time": "19:00",
+         "Distance": "2.00 miles",
+         "Pace" : "9:30 per mile"}
+    ],
+
+    "routes": [
+        {"Name": "Bayshore Bikeway",
+         "Distance": "17.1 miles",
+         "Surface" : "Asphalt, Concrete"},
+        {"Name": "Coastal Rail Trail",
+         "Distance": "4.7 miles",
+         "Surface" : "Asphalt, Concrete"},
+        {"Name": "Mission Beach-Pacific Beach Boardwalk",
+         "Distance": "3 miles",
+         "Surface" : "Concrete"},
+        {"Name": "Sorrento Valley Road Trail",
+         "Distance": "1 miles",
+         "Surface" : "Asphalt"},
+        {"Name": "Rose Canyon Bicycle Path",
+         "Distance": "2.1 miles",
+         "Surface" : "Asphalt"}
+      ]
 }
