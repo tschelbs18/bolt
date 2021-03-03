@@ -12,7 +12,8 @@
     <link href="/css/music.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/music.js"></script>
+    <script src="/js/during_run.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_WhZxAZoEFdrobhSkGOjA2tXtETupfEg&callback=initMap"></script>
 </head>
 <body>
     <nav class="navbar navbar-default">
@@ -27,6 +28,7 @@
       allowtransparency="true" allow="encrypted-media">
     </iframe>
     -->
+    <!--
     <form id="user-input">
       <label for="command">Say or enter Command:</label><br>
       <input type="text" id="command" name="inputcommand"><br>
@@ -35,6 +37,14 @@
     <p>
       play, pause, skip, back, louder, softer, mute, hype (or lets go), finish run
     </p>
+    -->
+
+    <div id="map" class="map"></div>
+    <div class="metrics">
+      <p id="time">Time: </p>
+      <p id="dist">Distance: </p>
+      <p id="pace">Pace: </p>
+    </div>
 
     <div id="app-cover">
       <!--
