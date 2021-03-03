@@ -7,10 +7,15 @@ $(document).ready(function() {
  */
 function initializePage() {
 	console.log("Page ready");
-  initTimer();
-  setInterval(updateTimer, 1000);
  	//initPlayer();
   //initCommandForm();
+}
+
+function startRun() {
+  initTimer();
+  setInterval(updateTimer, 1000);
+  $('#pre-run-container').css("display", "none");
+  $('#run-container').css("display", "flex");
 }
 
 function initTimer()
@@ -29,9 +34,9 @@ function updateTimer()
   if (miles != 0) {
     var pace = Math.round(seconds / miles);
     pace = new Date(pace * 1000).toISOString().substr(14, 5);
-    $('#pace').text('Pace: ' + pace + ' seconds per mile')
+    $('#pace').text('Pace: ' + pace);
   } else {
-    $('#pace').text('Pace: ')
+    $('#pace').text('Pace: ');
   }
 }
 

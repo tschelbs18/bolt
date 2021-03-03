@@ -51,3 +51,12 @@ h2 {
     background: #f0f0f0;
     height: 400px;
 }
+
+#run-container {
+  display: none;
+}
+
+#start-run-btn {
+  width: 50%;
+  height: 200px;
+}
