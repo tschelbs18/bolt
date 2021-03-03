@@ -329,7 +329,7 @@ $(function()
     function initSpeech() {
 
       // new speech recognition object
-      var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
+      var SpeechRecognition = webkitSpeechRecognition;
       var recognition = new SpeechRecognition();
       recognition.continuous = true;
       //recognition.interimResults = true;
