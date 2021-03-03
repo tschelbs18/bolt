@@ -239,34 +239,34 @@ $(function()
 
       // This runs when the speech recognition service returns result
       recognition.onresult = function(event) {
-          var command = event.results[event.results.length - 1][0].transcript.trim();
+          var command = event.results[event.results.length - 1][0].transcript.trim().toLowerCase();
           var confidence = event.results[event.results.length - 1][0].confidence;
           console.log(command);
-          if (command == 'pause' || command == 'play'){
+          if (command.includes('pause') || command.includes('play')){
             playPause();
-          } else if (command == 'skip') {
+          } else if (command.includes('skip') || command.includes('next')) {
             selectTrack(1);
-          } else if (command == 'back') {
+          } else if (command.includes('back') || command.includes('previous')) {
             selectTrack(-1);
-          } else if (command == 'louder') {
+          } else if (command.includes('louder') || command.includes('volume up')) {
             if (audio.volume >= 0.8) {
               audio.volume = 1;
             } else {
               audio.volume += 0.2;
             }
-          } else if (command == 'softer') {
+          } else if (command.includes('softer') || command.includes('quiet') || command.includes('volume down')) {
             if (audio.volume <= 0.2) {
               audio.volume = 0;
             }
             else {
               audio.volume -= 0.2;
             }
-          } else if (command == 'mute') {
+          } else if (command.includes('mute') || command.includes('volume off')) {
             audio.volume = 0;
-          } else if (command == 'hype' || command == "let's go" ) {
+          } else if (command.includes('hype') || command == "let's go" || command == "let's get it") {
             currIndex = 1;
             selectTrack(1);
-          } else if (command == "finish" || command == "end run" || command == "finish run") {
+          } else if (command.includes("finish") || command.includes("end")) {
             window.location.replace("../finished_run");
           }
 
