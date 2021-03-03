@@ -5,6 +5,6 @@ var data = {};
  */
 
 exports.view = function(req, res){
-    res.render('musicSandbox', {data
+    res.render('duringRun', {data
     });
 }
