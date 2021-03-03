@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bolt Music Sandbox</title>
+    <title>Bolt Run</title>
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.3.1/css/all.css'>
     <link href="/css/bootstrap.min.css" rel="stylesheet">
 	  <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
@@ -12,12 +12,13 @@
     <link href="/css/music.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/music.js"></script>
+    <script src="/js/during_run.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_WhZxAZoEFdrobhSkGOjA2tXtETupfEg&callback=initMap"></script>
 </head>
 <body>
     <nav class="navbar navbar-default">
 		<a href="/home" class="navbar-text">< Home</a>
-		<h1 class="navbar-text">Music Sandbox</h1>
+		<h1 class="navbar-text">Run</h1>
 	</nav>
 
 	<div class="container">
@@ -27,6 +28,7 @@
       allowtransparency="true" allow="encrypted-media">
     </iframe>
     -->
+    <!--
     <form id="user-input">
       <label for="command">Say or enter Command:</label><br>
       <input type="text" id="command" name="inputcommand"><br>
@@ -35,6 +37,14 @@
     <p>
       play, pause, skip, back, louder, softer, mute, hype (or lets go), finish run
     </p>
+    -->
+
+    <div id="map" class="map"></div>
+    <div class="metrics">
+      <p id="time">Time: </p>
+      <p id="dist">Distance: </p>
+      <p id="pace">Pace: </p>
+    </div>
 
     <div id="app-cover">
       <!--
