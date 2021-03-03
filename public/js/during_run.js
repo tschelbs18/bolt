@@ -7,10 +7,15 @@ $(document).ready(function() {
  */
 function initializePage() {
 	console.log("Page ready");
-  initTimer();
-  setInterval(updateTimer, 1000);
  	//initPlayer();
   //initCommandForm();
+}
+
+function startRun() {
+  initTimer();
+  setInterval(updateTimer, 1000);
+  $('#pre-run-container').css("display", "none");
+  $('#run-container').css("display", "flex");
 }
 
 function initTimer()
@@ -26,8 +31,13 @@ function updateTimer()
   $('#time').text('Time: ' + seconds);
   var dist = $('#dist').text();
   var miles = parseInt(dist.substr(dist.lastIndexOf(' '), 1000000000));
-  var pace = seconds / miles;
-  $('#pace').text('Pace: ' + pace)
+  if (miles != 0) {
+    var pace = Math.round(seconds / miles);
+    pace = new Date(pace * 1000).toISOString().substr(14, 5);
+    $('#pace').text('Pace: ' + pace);
+  } else {
+    $('#pace').text('Pace: ');
+  }
 }
 
 function calculateDistance(lat1, lon1, lat2, lon2) {
@@ -99,7 +109,7 @@ function initMap() {
       }
       curr_lat = lat;
       curr_lng = lng;
-      var distance = calculateDistance(start_lat, start_lng, curr_lat, curr_lng);
+      var distance = Math.round(calculateDistance(start_lat, start_lng, curr_lat, curr_lng) * 100) / 100;
       $('#dist').text('Distance: ' + distance);
       console.log(distance);
     },
