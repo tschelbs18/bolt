@@ -330,7 +330,7 @@ $(function()
 
       // new speech recognition object
       var SpeechRecognition = webkitSpeechRecognition;
-      var recognition = new SpeechRecognition();
+      var recognition = new webkitSpeechRecognition();
       recognition.continuous = true;
       //recognition.interimResults = true;
 
