@@ -2,8 +2,8 @@
  * GET nearby routes page.
  */
 
-const jsonData = require('../public/js/data.json');
+const db = require('../public/data/routes.json');
 
 exports.view = function(req, res){
-    res.render('routes', { routes: jsonData.routes });
+    res.render('routes', { routes: db[req.session.username] });
 }

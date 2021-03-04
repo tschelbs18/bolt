@@ -2,11 +2,10 @@
  * GET Run Screen
  */
 
-const jsonData = require('../public/js/data.json');
-const fs = require('fs');
+const db = require('../public/data/settings.json');
 
 exports.view = function(req, res) {
-    res.render('settings', { settings: jsonData.settings });
+    res.render('settings', { settings: db[req.session.username] });
 }
 
 exports.saveSettings = function(req, res) {
@@ -17,7 +16,7 @@ exports.saveSettings = function(req, res) {
     var kilometersUsed = req.body.kilometersUsed;
     var milesUsed = req.body.milesUsed;
 
-    var settingsRef = jsonData.settings;
+    const settingsRef = db[req.session.username];
     settingsRef.possibleHype.forEach(element => {
         if (element.name !== hypeSong) {
             element.selected = false;
@@ -26,16 +25,12 @@ exports.saveSettings = function(req, res) {
         }
     });
 
-    settingsRef.audio_feedback.distance.enabled = distanceUsed;
-    settingsRef.audio_feedback.pace.enabled = paceUsed;
-    settingsRef.audio_feedback.time.enabled = timeUsed;
+    settingsRef.audio_feedback.distance.selected = (distanceUsed === 'true');
+    settingsRef.audio_feedback.pace.selected = (paceUsed === 'true');
+    settingsRef.audio_feedback.time.selected = (timeUsed === 'true');
 
-    settingsRef.metric.Miles = milesUsed;
-    settingsRef.metric.Kilometers = kilometersUsed;
+    settingsRef.metric.Miles = (milesUsed === 'true');
+    dsettingsRef.metric.Kilometers = (kilometersUsed === 'true');
 
-    res.send('it worked');
-
-    jsonData.settings = settingsRef;
-
-    fs.writeFileSync('public/js/data.json', JSON.stringify(jsonData, null, 4));
+    res.send({message: 'It worked'});
 }

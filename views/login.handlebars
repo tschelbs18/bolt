@@ -48,12 +48,19 @@
   var y = document.getElementById("register");
   var z = document.getElementById("btn");
 
+  function removeStatusMessages() {
+    $('.error').remove();
+    $('.success').remove();
+  }
+
   function register(){
+    removeStatusMessages();
     x.style.left = "-400px";
     y.style.left = "50px"
     z.style.left = "110px"
   }
   function login(){
+    removeStatusMessages();
     x.style.left = "50px";
     y.style.left = "450px"
     z.style.left = "0px"
@@ -61,19 +68,39 @@
 
   function initEverything() {
     $('#register > .submit-btn').click(function (e) {
+      removeStatusMessages();
       e.preventDefault();
-      if ($('#register > input:invalid').length === 0) {
-        window.location.href = '/home';
-      } else {
-        return false;
+      if ($('#register > input:invalid').length > 0) {
+        return;
       }
+
+      $.post('/signup', {
+        username: $('#register > input:nth-child(1)').val(),
+        email:    $('#register > input:nth-child(2)').val(),
+        password: $('#register > input:nth-child(3)').val()
+      }).done(function(data) {
+        $('#register').append('<p class="success">' + data.message + '</p>');
+      }).fail(function(data) {
+        $('#register').append('<p class="error">' + data.responseJSON.error + '</p>');
+      });
+
     });
 
     $('#login > .submit-btn').click(function (e) {
+      removeStatusMessages();
       e.preventDefault();
-      if ($('#login > input:invalid').length === 0) {
-        window.location.href = '/home';
+      if ($('#login > input:invalid').length > 0) {
+        return;
       }
+
+      $.post('/login', {
+        username: $('#login > input:nth-child(1)').val(),
+        password: $('#login > input:nth-child(2)').val()
+      }).done(function(data) {
+        window.location.href = '/home';
+      }).fail(function(data) {
+        $('#login').append('<p class="error">' + data.responseJSON.error + '</p>');
+      });
     });
   }
 </script>
