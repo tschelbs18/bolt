@@ -11,8 +11,9 @@ var handlebars = require('express3-handlebars')
 var login = require('./routes/login');
 var home = require('./routes/home');
 var settings = require('./routes/settings');
-
 // var runScreen = require('./routes/runScreen');
+// var duringRun = require('./routes/duringRun');
+
 // var musicSandbox = require('./routes/musicSandbox');
 // var finishedRun = require('./routes/finishedRun');
 // var pastRuns = require('./routes/pastRuns');
@@ -48,6 +49,11 @@ app.get('/', login.view);
 app.post('/login', login.login);
 app.post('/signup', login.signUp);
 app.get('/home', home.view);
+<<<<<<< HEAD
+=======
+app.get('/start_run', runScreen.view);
+app.get('/during_run', duringRun.view);
+>>>>>>> fe57688b8c346ec22a70b739e524e9a4d90ad3a6
 app.get('/settings', settings.view);
 app.post('/saveSettings', settings.saveSettings);
 
