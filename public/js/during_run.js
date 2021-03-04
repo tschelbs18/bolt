@@ -373,51 +373,21 @@ $(function()
           } else if (command.includes('hype') || command == "let's go" || command == "let's get it") {
             currIndex = 1;
             selectTrack(1);
-          } else if (command.includes("finish") || command.includes("end")) {
+          } else if (command.includes("finish") || command.includes("end") || command == "and run") {
+            $.post('finished_run', {
+              "time": $('#time').text().replace('Time: ',''),
+              "distance": $('#dist').text().replace("Distance: ", ''),
+              "pace": $('#pace').text().replace("Pace: ",'')});
             window.location.replace("../finished_run");
+          } else if (command.includes("start")) {
+            startRun();
+            playPause();
           }
 
       };
 
        // start recognition
        recognition.start();
-    }
-
-    // init RSVP form submit listener
-    function initCommandForm() {
-      $('#user-input').submit(function(e) {
-        e.preventDefault();
-        var command = $('#command').val();
-        console.log(command);
-        if (command == 'pause' || command == 'play'){
-          playPause();
-        } else if (command == 'skip') {
-          selectTrack(1);
-        } else if (command == 'back') {
-          selectTrack(-1);
-        } else if (command == 'louder') {
-          if (audio.volume >= 0.8) {
-            audio.volume = 1;
-          } else {
-            audio.volume += 0.2;
-          }
-        } else if (command == 'softer') {
-          if (audio.volume <= 0.2) {
-            audio.volume = 0;
-          }
-          else {
-            audio.volume -= 0.2;
-          }
-        } else if (command == 'mute') {
-          audio.volume = 0;
-        } else if (command == 'hype' || command == "let's go" ) {
-          currIndex = 1;
-          selectTrack(1);
-        } else if (command == "finish" || command == "end run" || command == "finish run") {
-          window.location.replace("../finished_run");
-        }
-        $('#command').val('');
-      });
     }
 
     function initPlayer()
@@ -443,6 +413,5 @@ $(function()
 	}
 
 	initPlayer();
-  initCommandForm();
   initSpeech();
 });

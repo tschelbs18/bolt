@@ -58,6 +58,7 @@ app.post('/saveSettings', settings.saveSettings);
 app.get('/start_run', runScreen.view);
 app.get('/during_run', duringRun.view);
 app.get('/finished_run', finishedRun.view);
+app.post('/finished_run', finishedRun.finishRun);
 
 app.get('/past_runs', pastRuns.view);
 app.post('/saveRun', pastRuns.saveRun);
