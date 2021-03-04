@@ -93,7 +93,7 @@ const getPositionErrorMessage = code => {
 };
 
 function initMap() {
-  const initialPosition = { lat: 32.7157, lng: -117.161 };
+  const initialPosition = { lat: 32.7157, lng: -117.1615 };
   const map = createMap(initialPosition);
   const marker = createMarker({ map, position: initialPosition });
   var start_lat, start_lng, curr_lat, curr_lng;
