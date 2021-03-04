@@ -10,15 +10,17 @@ var handlebars = require('express3-handlebars')
 
 var login = require('./routes/login');
 var home = require('./routes/home');
+
 var settings = require('./routes/settings');
-// var runScreen = require('./routes/runScreen');
-// var duringRun = require('./routes/duringRun');
 
-// var musicSandbox = require('./routes/musicSandbox');
-// var finishedRun = require('./routes/finishedRun');
-// var pastRuns = require('./routes/pastRuns');
-// var routes = require('./routes/routes');
+var runScreen = require('./routes/runScreen');
+var duringRun = require('./routes/duringRun');
 
+var finishedRun = require('./routes/finishedRun');
+
+var pastRuns = require('./routes/pastRuns');
+
+var routes = require('./routes/routes');
 
 // Example route
 // var user = require('./routes/user');
@@ -49,19 +51,18 @@ app.get('/', login.view);
 app.post('/login', login.login);
 app.post('/signup', login.signUp);
 app.get('/home', home.view);
-<<<<<<< HEAD
-=======
-app.get('/start_run', runScreen.view);
-app.get('/during_run', duringRun.view);
->>>>>>> fe57688b8c346ec22a70b739e524e9a4d90ad3a6
+
 app.get('/settings', settings.view);
 app.post('/saveSettings', settings.saveSettings);
 
-// app.get('/start_run', runScreen.view);
-// app.get('/music_sandbox', musicSandbox.view);
-// app.get('/finished_run', finishedRun.view);
-// app.get('/past_runs', pastRuns.view);
-// app.get('/routes', routes.view);
+app.get('/start_run', runScreen.view);
+app.get('/during_run', duringRun.view);
+app.get('/finished_run', finishedRun.view);
+
+app.get('/past_runs', pastRuns.view);
+app.post('/saveRun', pastRuns.saveRun);
+
+app.get('/routes', routes.view);
 
 // Example route
 // app.get('/users', user.list);

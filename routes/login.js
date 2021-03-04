@@ -6,6 +6,8 @@ const renderData = require('../public/data/renderData.json');
 const accountDb = require('../public/data/accounts.json');
 
 const settingsDb = require('../public/data/settings.json');
+const runsDb     = require('../public/data/pastRuns.json');
+const routesDb   = require('../public/data/routes.json');
 
 const defaultSettings = {
     possibleHype: [
@@ -56,6 +58,8 @@ const defaultSettings = {
     }
 }
 
+const defaultRuns = [], defaultRoutes = [];
+
 exports.view = function(req, res) {
     res.render('login', {alternativeLogins: renderData.altLoginOptions});
 }
@@ -82,6 +86,8 @@ exports.signUp = function(req, res) {
     }
     accountDb[reqUsername] = {password: reqPassword, email: reqEmail};
     settingsDb[reqUsername] = defaultSettings;
+    runsDb[reqUsername] = defaultRuns;
+    routesDb[reqUsername] = defaultRoutes;
 
     return res.status(201).send({message: 'Account created'});
 }

@@ -17,21 +17,56 @@
 	</nav>
 
 	<div class="container">
-    <h3>Time: 33:29</h3>
+    <h3>Time: <span id="time">33:29</span></h3>
     <br>
-    <h3>Distance: 3.81 Miles</h3>
+    <h3>Distance: <span id="distance">3.81 miles</span></h3>
     <br>
-    <h3>Pace: 8:47 / Mile</h3>
+    <h3>Pace: <span id="pace">8:47 per mile</span></h3>
     <br>
     <h3>Route:</h3>
     <br>
     <img src="/images/route_example.JPG" alt="Route">
     <p></p>
     <br>
-    <button type="button" name="save_button" onclick="location.href='../past_runs'">Save Run</button>
-    <button type="button" name="discard_button" onclick="location.href='../'">Discard Run</button>
+    <button type="button" id="save_button" name="save_button">Save Run</button>
+    <button type="button" id="discard_button" name="discard_button">Discard Run</button>
 	</div>
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            initEverything();
+        });
+
+        function initEverything() {
+            $('#save_button').click(function (e) {
+                function datePad(s) {
+                    return s.padStart(2, '0');
+                }
+
+                var runningDate = new Date();
+                runningDate = `${datePad((1 + runningDate.getMonth()).toString())} / ${datePad(runningDate.getDate().toString())} / ${runningDate.getFullYear()}`;
+                $.post('/saveRun', {
+                    date: runningDate,
+                    time: $('#time').text(),
+                    distance: $('#distance').text(),
+                    pace: $('#pace').text()
+                }).done(function (data) {
+                    window.location.href = '/past_runs';
+                }).fail(function (data) {
+                    if (data.status === 404) {
+                        alert('Page not found');
+                    } else {
+                        alert(data.responseJSON.error);
+                    }
+                });
+            });
+
+            $('#discard_button').click(function (e) {
+                window.location.href = '/home';
+            });
+        }
+    </script>
 </body>
 </html>
