@@ -61,7 +61,7 @@ const defaultSettings = {
 const defaultRuns = [], defaultRoutes = [];
 
 exports.view = function(req, res) {
-    res.render('login', {alternativeLogins: renderData.altLoginOptions});
+    res.render('login', {alternativeLogins: [] /*renderData.altLoginOptions*/});
 }
 
 exports.login = function(req, res) {
