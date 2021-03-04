@@ -30,7 +30,7 @@ exports.saveSettings = function(req, res) {
     settingsRef.audio_feedback.time.selected = (timeUsed === 'true');
 
     settingsRef.metric.Miles = (milesUsed === 'true');
-    dsettingsRef.metric.Kilometers = (kilometersUsed === 'true');
+    settingsRef.metric.Kilometers = (kilometersUsed === 'true');
 
     res.send({message: 'It worked'});
 }
