@@ -374,11 +374,11 @@ $(function()
             currIndex = 1;
             selectTrack(1);
           } else if (command.includes("finish") || command.includes("end") || command == "and run") {
-            //window.location.replace("../finished_run");
-            $.get('/finished_run', {
-              "time": $('#time').text(),
-              "distance": $('#dist').text(),
-              "pace": $('#pace').text()});
+            $.post('finished_run', {
+              "time": $('#time').text().replace('Time: ',''),
+              "distance": $('#dist').text().replace("Distance: ", ''),
+              "pace": $('#pace').text().replace("Pace: ",'')});
+            window.location.replace("../finished_run");
           } else if (command.includes("start")) {
             startRun();
             playPause();
