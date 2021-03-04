@@ -374,7 +374,11 @@ $(function()
             currIndex = 1;
             selectTrack(1);
           } else if (command.includes("finish") || command.includes("end") || command == "and run") {
-            window.location.replace("../finished_run");
+            //window.location.replace("../finished_run");
+            $.get('/finished_run', {
+              "time": $('#time').text(),
+              "distance": $('#dist').text(),
+              "pace": $('#pace').text()});
           } else if (command.includes("start")) {
             startRun();
             playPause();

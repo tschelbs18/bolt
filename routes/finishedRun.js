@@ -1,9 +1,12 @@
-var data = {};
 /*
  * GET finished run page.
  */
 
 exports.view = function(req, res){
-    res.render('finishedRun', {data
-    });
+    var data = {
+      "time" : req.params.time,
+      "distance": req.params.distance,
+      "pace": req.params.pace
+    };
+    res.render('finishedRun', data);
 }
