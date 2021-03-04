@@ -46,8 +46,8 @@
             <br>
             <div id="audio-feedback">
             {{#each settings.audio_feedback}}
-                {{#if enabled}}
-                    <input type="checkbox" id="{{@key}}" name="{{@key}}" checked>
+                {{#if selected}}
+                    <input type="checkbox" id="{{@key}}" name="{{@key}}" checked="">
                 {{else}}
                     <input type="checkbox" id="{{@key}}" name="{{@key}}">
                 {{/if}}

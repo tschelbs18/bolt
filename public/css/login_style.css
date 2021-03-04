@@ -90,12 +90,21 @@
 span{
   color: #777;
   font-size: 12px;
-  bottom: 68px;
-  position: absolute;
 }
 #login{
   left: 50px;
 }
 #register{
   left: 450px;
+}
+.error, .success {
+  margin-top: 5%;
+  text-align: center;
+  opacity: 0.5;
+}
+.error {
+  color: red;
+}
+.success {
+  color: green;
 }

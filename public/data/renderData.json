@@ -1,0 +1,84 @@
+{
+    "altLoginOptions": [
+        {
+            "name": "facebook",
+            "icon": "../images/fb.png"
+        },
+        {
+            "name": "twitter",
+            "icon": "../images/tw.png"
+        },
+        {
+            "name": "google",
+            "icon": "../images/gp.png"
+        }
+    ],
+    "homeMenuItems": [
+        {
+            "id": "settings",
+            "path": "settings",
+            "image": "https://res.cloudinary.com/glide/image/fetch/f_auto,w_225,h_338,c_lfill/https%3A%2F%2Fwww.flaticon.com%2Fsvg%2Fvstatic%2Fsvg%2F126%2F126472.svg%3Ftoken%3Dexp%3D1613004942~hmac%3De2c5b782334c4e6932f01cf4f10e2767",
+            "name": "My Settings"
+        },
+        {
+            "id": "start-run",
+            "path": "start_run",
+            "image": "https://img.icons8.com/ios/452/running.png",
+            "name": "Start Run"
+        },
+        {
+            "id": "routes",
+            "path": "routes",
+            "image": "https://img.icons8.com/pastel-glyph/2x/route.png",
+            "name": "Routes"
+        },
+        {
+            "id": "past-runs",
+            "path": "past_runs",
+            "image": "https://res.cloudinary.com/glide/image/fetch/f_auto,w_225,h_338,c_lfill/https%3A%2F%2Fwww.flaticon.com%2Fsvg%2Fvstatic%2Fsvg%2F32%2F32223.svg%3Ftoken%3Dexp%3D1613005293~hmac%3Dcdb4576cb5cbc12e17502ec6907d70e7",
+            "name": "Past Runs"
+        }
+    ],
+    "runningActions": [
+        {
+            "id": "start-run",
+            "image": "https://cdn.iconscout.com/icon/free/png-64/start-1438842-1214529.png",
+            "name": "Run"
+        },
+        {
+            "id": "increase-volume",
+            "image": "https://cdn2.iconfinder.com/data/icons/media-controls-7/24/icon-media-controls-decrease-volume-512.png",
+            "name": "Louder"
+        },
+        {
+            "id": "decrease-volume",
+            "image": "https://static.thenounproject.com/png/3408653-200.png",
+            "name": "Softer"
+        },
+        {
+            "id": "query-distance",
+            "image": "https://static.thenounproject.com/png/193079-200.png",
+            "name": "Distance"
+        },
+        {
+            "id": "query-pace",
+            "image": "https://static.thenounproject.com/png/2806638-200.png",
+            "name": "Pace"
+        },
+        {
+            "id": "play-hype",
+            "image": "https://cdn.iconscout.com/icon/free/png-128/hype-machine-739506.png",
+            "name": "Hype"
+        },
+        {
+            "id": "skip-song",
+            "image": "https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_skip_next_48px-512.png",
+            "name": "Skip"
+        },
+        {
+            "id": "play-prev-song",
+            "image": "https://cdn.iconscout.com/icon/free/png-128/back-1438835-1214522.png",
+            "name": "Back"
+        }
+    ]
+}

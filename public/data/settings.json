@@ -1,0 +1,50 @@
+{
+    "testAccount": {
+        "possibleHype": [
+            {
+                "name": "Kaaze - Electro Boy",
+                "selected": false
+            },
+            {
+                "name": "Skylike - Dawn",
+                "selected": true
+            },
+            {
+                "name": "Alex Skrindo - Me & You",
+                "selected": false
+            },
+            {
+                "name": "Jordan Schor - Home",
+                "selected": false
+            },
+            {
+                "name": "Martin Garrix - Proxy",
+                "selected": false
+            }
+        ],
+        "possiblePlaylist": [
+            {
+                "name": "Default",
+                "selected": true
+            }
+        ],
+        "audio_feedback": {
+            "distance": {
+                "selected": true,
+                "description": "I want Bolt to tell me my total distance every kilometer/mile"
+            },
+            "pace": {
+                "selected": true,
+                "description": "I want Bolt to tell me my pace at every kilometer/mile"
+            },
+            "time": {
+                "selected": true,
+                "description": "I want Bolt to tell me every 10 minutes how long I've been running"
+            }
+        },
+        "metric": {
+            "Miles": true,
+            "Kilometers": false
+        }
+    }
+}
