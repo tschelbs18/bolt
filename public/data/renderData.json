@@ -17,12 +17,12 @@
         {
             "id": "settings",
             "path": "settings",
-            "image": "https://res.cloudinary.com/glide/image/fetch/f_auto,w_225,h_338,c_lfill/https%3A%2F%2Fwww.flaticon.com%2Fsvg%2Fvstatic%2Fsvg%2F126%2F126472.svg%3Ftoken%3Dexp%3D1613004942~hmac%3De2c5b782334c4e6932f01cf4f10e2767",
+            "image": "https://img.icons8.com/wired/64/000000/settings.png",
             "name": "My Settings"
         },
         {
             "id": "start-run",
-            "path": "start_run",
+            "path": "during_run",
             "image": "https://img.icons8.com/ios/452/running.png",
             "name": "Start Run"
         },
@@ -37,38 +37,49 @@
             "path": "past_runs",
             "image": "https://res.cloudinary.com/glide/image/fetch/f_auto,w_225,h_338,c_lfill/https%3A%2F%2Fwww.flaticon.com%2Fsvg%2Fvstatic%2Fsvg%2F32%2F32223.svg%3Ftoken%3Dexp%3D1613005293~hmac%3Dcdb4576cb5cbc12e17502ec6907d70e7",
             "name": "Past Runs"
+        },
+        {
+            "id": "help",
+            "path": "start_run",
+            "image": "https://img.icons8.com/carbon-copy/100/000000/help.png",
+            "name": "Help"
         }
     ],
     "runningActions": [
         {
             "id": "start-run",
             "image": "https://cdn.iconscout.com/icon/free/png-64/start-1438842-1214529.png",
-            "name": "Run"
+            "name": "Start Run"
         },
         {
-            "id": "increase-volume",
-            "image": "https://cdn2.iconfinder.com/data/icons/media-controls-7/24/icon-media-controls-decrease-volume-512.png",
-            "name": "Louder"
+            "id": "finish-run",
+            "image": "https://img.icons8.com/wired/64/000000/stop-sign.png",
+            "name": "Finish Run"
         },
         {
             "id": "decrease-volume",
+            "image": "https://cdn2.iconfinder.com/data/icons/media-controls-7/24/icon-media-controls-decrease-volume-512.png",
+            "name": "Softer/ Mute"
+        },
+        {
+            "id": "increase-volume",
             "image": "https://static.thenounproject.com/png/3408653-200.png",
-            "name": "Softer"
+            "name": "Louder"
         },
         {
             "id": "query-distance",
             "image": "https://static.thenounproject.com/png/193079-200.png",
-            "name": "Distance"
+            "name": "Distance (coming soon)"
         },
         {
             "id": "query-pace",
             "image": "https://static.thenounproject.com/png/2806638-200.png",
-            "name": "Pace"
+            "name": "Pace (coming soon)"
         },
         {
             "id": "play-hype",
             "image": "https://cdn.iconscout.com/icon/free/png-128/hype-machine-739506.png",
-            "name": "Hype"
+            "name": "Hype / Lets go"
         },
         {
             "id": "skip-song",
