@@ -30,7 +30,7 @@ function updateTimer()
   seconds++;
   $('#time').text('Time: ' + seconds);
   var dist = $('#dist').text();
-  var miles = parseInt(dist.substr(dist.lastIndexOf(' '), 1000000000));
+  var miles = parseFloat(dist.substr(dist.lastIndexOf(' '), 1000000000));
   if (miles != 0) {
     var pace = Math.round(seconds / miles);
     pace = new Date(pace * 1000).toISOString().substr(14, 5);
