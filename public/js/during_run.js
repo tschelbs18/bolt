@@ -377,8 +377,10 @@ $(function()
             $.post('finished_run', {
               "time": $('#time').text().replace('Time: ',''),
               "distance": $('#dist').text().replace("Distance: ", ''),
-              "pace": $('#pace').text().replace("Pace: ",'')});
-            window.location.replace("../finished_run");
+              "pace": $('#pace').text().replace("Pace: ",'')},
+              function() {
+                window.location.replace("../finished_run");
+              });
           } else if (command.includes("start")) {
             startRun();
             playPause();

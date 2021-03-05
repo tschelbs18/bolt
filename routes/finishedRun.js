@@ -15,5 +15,6 @@ exports.finishRun = function (req, res) {
   req.session.time = req.body.time;
   req.session.distance = req.body.distance;
   req.session.pace = req.body.pace;
+  console.log("req.session.time");
   res.send('finished run');
 }
