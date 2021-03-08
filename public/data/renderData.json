@@ -67,16 +67,6 @@
             "name": "Louder"
         },
         {
-            "id": "query-distance",
-            "image": "https://static.thenounproject.com/png/193079-200.png",
-            "name": "Distance (coming soon)"
-        },
-        {
-            "id": "query-pace",
-            "image": "https://static.thenounproject.com/png/2806638-200.png",
-            "name": "Pace (coming soon)"
-        },
-        {
             "id": "play-hype",
             "image": "https://cdn.iconscout.com/icon/free/png-128/hype-machine-739506.png",
             "name": "Hype / Lets go"
