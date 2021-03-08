@@ -9,5 +9,5 @@ exports.view = function(req, res){
         res.redirect('/');
     }
 
-    res.render('routes', { routes: db[req.session.username] });
+    res.render('routes', { routes: db["San Diego"] });
 }

@@ -12,10 +12,15 @@ function initializePage() {
 }
 
 function startRun() {
-  initTimer();
-  setInterval(updateTimer, 1000);
-  $('#pre-run-container').css("display", "none");
-  $('#run-container').css("display", "flex");
+  if ($('#pre-run-container').css('display') == 'none') {
+    // Start run has already been called
+    //pass
+  } else {
+    initTimer();
+    setInterval(updateTimer, 1000);
+    $('#pre-run-container').css("display", "none");
+    $('#run-container').css("display", "flex");
+}
 }
 
 function initTimer()
@@ -30,7 +35,7 @@ function updateTimer()
   seconds++;
   $('#time').text('Time: ' + seconds);
   var dist = $('#dist').text();
-  var miles = parseInt(dist.substr(dist.lastIndexOf(' '), 1000000000));
+  var miles = parseFloat(dist.substr(dist.lastIndexOf(' '), 1000000000));
   if (miles != 0) {
     var pace = Math.round(seconds / miles);
     pace = new Date(pace * 1000).toISOString().substr(14, 5);
@@ -371,14 +376,20 @@ $(function()
           } else if (command.includes('mute') || command.includes('volume off')) {
             audio.volume = 0;
           } else if (command.includes('hype') || command == "let's go" || command == "let's get it") {
-            currIndex = 1;
-            selectTrack(1);
+            $.get('/getHype').done(function(data) {
+              var hype_index = data;
+              console.log('Your hype index is: ' + hype_index)
+              currIndex = hype_index - 1;
+              selectTrack(1); }
+            );
           } else if (command.includes("finish") || command.includes("end") || command == "and run") {
             $.post('finished_run', {
               "time": $('#time').text().replace('Time: ',''),
               "distance": $('#dist').text().replace("Distance: ", ''),
-              "pace": $('#pace').text().replace("Pace: ",'')});
-            window.location.replace("../finished_run");
+              "pace": $('#pace').text().replace("Pace: ",'')},
+              function() {
+                window.location.replace("../finished_run");
+              });
           } else if (command.includes("start")) {
             startRun();
             playPause();
