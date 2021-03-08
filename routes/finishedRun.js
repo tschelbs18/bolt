@@ -3,12 +3,16 @@
  */
 
 exports.view = function(req, res){
-    var data = {
-      "time" : req.session.time,
-      "distance": req.session.distance,
-      "pace": req.session.pace
-    };
-    res.render('finishedRun', data);
+  if (req.session.username === undefined) {
+    res.redirect('/');
+  }
+
+  var data = {
+    "time" : req.session.time,
+    "distance": req.session.distance,
+    "pace": req.session.pace
+  };
+  res.render('finishedRun', data);
 }
 
 exports.finishRun = function (req, res) {

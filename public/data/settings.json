@@ -2,16 +2,16 @@
     "testAccount": {
         "possibleHype": [
             {
-                "name": "Kaaze - Electro Boy",
-                "selected": false
-            },
-            {
                 "name": "Skylike - Dawn",
-                "selected": true
+                "selected": false
             },
             {
                 "name": "Alex Skrindo - Me & You",
                 "selected": false
+            },
+            {
+                "name": "Kaaze - Electro Boy",
+                "selected": true
             },
             {
                 "name": "Jordan Schor - Home",
