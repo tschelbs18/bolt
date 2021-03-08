@@ -5,6 +5,9 @@ var data = {};
  */
 
 exports.view = function(req, res){
-    res.render('duringRun', {data
-    });
+    if (req.session.username === undefined) {
+        res.redirect('/');
+    }
+
+    res.render('duringRun', {data});
 }
