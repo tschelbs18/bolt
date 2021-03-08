@@ -12,10 +12,15 @@ function initializePage() {
 }
 
 function startRun() {
-  initTimer();
-  setInterval(updateTimer, 1000);
-  $('#pre-run-container').css("display", "none");
-  $('#run-container').css("display", "flex");
+  if ($('#pre-run-container').css('display') == 'none') {
+    // Start run has already been called
+    //pass
+  } else {
+    initTimer();
+    setInterval(updateTimer, 1000);
+    $('#pre-run-container').css("display", "none");
+    $('#run-container').css("display", "flex");
+}
 }
 
 function initTimer()
