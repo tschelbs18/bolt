@@ -5,10 +5,18 @@
 const db = require('../public/data/settings.json');
 
 exports.view = function(req, res) {
+    if (req.session.username === undefined) {
+        res.redirect('/');
+    }
+
     res.render('settings', { settings: db[req.session.username] });
 }
 
 exports.saveSettings = function(req, res) {
+    if (req.session.username === undefined) {
+        res.status(400).send({error: 'User must login before accessing endpoints.'})
+    }
+
     var hypeSong = req.body.hypeSong;
     var distanceUsed = req.body.distanceUsed;
     var paceUsed = req.body.paceUsed;
@@ -33,4 +41,19 @@ exports.saveSettings = function(req, res) {
     settingsRef.metric.Kilometers = (kilometersUsed === 'true');
 
     res.send({message: 'It worked'});
+}
+
+exports.getHype = function(req, res) {
+    if (req.session.username === undefined) {
+        res.status(400).send({error: 'User must login before accessing endpoints.'})
+    }
+
+    let user = req.session.username;
+    let songs = db[user].possibleHype;
+    let result = -1;
+    songs.forEach((el, ind) => {
+        if (el.selected) result = ind;
+    });
+
+    return res.send(`${result}`);
 }

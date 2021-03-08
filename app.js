@@ -54,6 +54,7 @@ app.get('/home', home.view);
 
 app.get('/settings', settings.view);
 app.post('/saveSettings', settings.saveSettings);
+app.get('/getHype', settings.getHype);
 
 app.get('/start_run', runScreen.view);
 app.get('/during_run', duringRun.view);

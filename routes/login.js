@@ -12,16 +12,16 @@ const routesDb   = require('../public/data/routes.json');
 const defaultSettings = {
     possibleHype: [
         {
-            name: "Kaaze - Electro Boy",
-            selected: true
-        },
-        {
             name: "Skylike - Dawn",
             selected: false
         },
         {
             name: "Alex Skrindo - Me & You",
             selected: false
+        },
+        {
+            name: "Kaaze - Electro Boy",
+            selected: true
         },
         {
             name: "Jordan Schor - Home",

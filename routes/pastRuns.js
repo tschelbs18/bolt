@@ -4,10 +4,18 @@ const db = require('../public/data/pastRuns.json');
  */
 
 exports.view = function(req, res){
+    if (req.session.username === undefined) {
+        res.redirect('/');
+    }
+
     res.render('pastRuns', { runs: db[req.session.username] });
 }
 
 exports.saveRun = function(req, res) {
+    if (req.session.username === undefined) {
+        res.status(400).send({error: 'User must login before accessing endpoints.'})
+    }
+
     var reqUser = req.session.username;
 
     var run = {
