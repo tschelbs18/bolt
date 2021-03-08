@@ -34,3 +34,13 @@ exports.saveSettings = function(req, res) {
 
     res.send({message: 'It worked'});
 }
+
+exports.getHype = function(req, res) {
+    let user = req.session.username;
+    let songs = db[user].possibleHype;
+    songs.forEach(el => {
+        if (el.selected) return res.send({index: db[user]});
+    });
+
+    return res.status(400).send({error: 'Hype song not found'});
+}
