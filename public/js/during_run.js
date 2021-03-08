@@ -376,8 +376,12 @@ $(function()
           } else if (command.includes('mute') || command.includes('volume off')) {
             audio.volume = 0;
           } else if (command.includes('hype') || command == "let's go" || command == "let's get it") {
-            currIndex = 1;
-            selectTrack(1);
+            $.get('/getHype').done(function(data) {
+              var hype_index = data;
+              console.log('Your hype index is: ' + hype_index)
+              currIndex = hype_index - 1;
+              selectTrack(1); }
+            );
           } else if (command.includes("finish") || command.includes("end") || command == "and run") {
             $.post('finished_run', {
               "time": $('#time').text().replace('Time: ',''),
