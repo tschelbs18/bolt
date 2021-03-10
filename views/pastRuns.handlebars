@@ -19,13 +19,16 @@
 
 	<div class="container">
     {{#each runs}}
-        <div class="menu">
+        <div class="info-log">
             <h3>{{Date}}</h3>
             <ul>
-            <li>Time: {{Time}}</li>
-            <li>Distance: {{Distance}}</li>
-            <li>Pace: {{Pace}}</li>
+                <li>Time: {{Time}}</li>
+                <li>Distance: {{Distance}}</li>
+                <li>Pace: {{Pace}}</li>
             </ul>
+            {{#unless @last}}
+            <hr>
+            {{/unless}}
         </div>
     {{/each}}
 	</div>

@@ -41,15 +41,15 @@ const defaultSettings = {
     audio_feedback: {
         distance: {
             selected: true,
-            description: "I want Bolt to tell me my total distance every kilometer/mile"
+            description: "Distance updates (WIP)"
         },
         pace: {
             selected: false,
-            description: "I want Bolt to tell me my pace at every kilometer/mile"
+            description: "Pace updates (WIP)"
         },
         time: {
             selected: false,
-            description: "I want Bolt to tell me every 10 minutes how long I've been running"
+            description: "Time updates (WIP)"
         }
     },
     metric: {
