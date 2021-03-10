@@ -3,6 +3,13 @@ header {
     align-items: center;
 }
 
+.nav-logo {
+  height: auto;
+  width: 10%;
+  position: absolute;
+  right: 10px;
+}
+
 .navbar {
     font-size: 32px;
     padding: 0.5em;
