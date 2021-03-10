@@ -30,7 +30,7 @@
             "id": "routes",
             "path": "routes",
             "image": "https://img.icons8.com/pastel-glyph/2x/route.png",
-            "name": "Routes"
+            "name": "Nearby Routes"
         },
         {
             "id": "past-runs",
