@@ -3,27 +3,32 @@
         {
             "Name": "Bayshore Bikeway",
             "Distance": "17.1 miles",
-            "Surface": "Asphalt, Concrete"
+            "Surface": "Asphalt, Concrete",
+            "Link": "https://www.traillink.com/trail/bayshore-bikeway/"
         },
         {
             "Name": "Coastal Rail Trail",
             "Distance": "4.7 miles",
-            "Surface": "Asphalt, Concrete"
+            "Surface": "Asphalt, Concrete",
+            "Link": "https://www.traillink.com/trail/coastal-rail-trail/"
         },
         {
             "Name": "Mission Beach-Pacific Beach Boardwalk",
             "Distance": "3 miles",
-            "Surface": "Concrete"
+            "Surface": "Concrete",
+            "Link": "https://www.traillink.com/trail/mission-beach-pacific-beach-boardwalk/"
         },
         {
             "Name": "Sorrento Valley Road Trail",
             "Distance": "1 miles",
-            "Surface": "Asphalt"
+            "Surface": "Asphalt",
+            "Link": "https://www.traillink.com/trail/sorrento-valley-road-trail/"
         },
         {
             "Name": "Rose Canyon Bicycle Path",
-            "Distance": "2.1 miles",
-            "Surface": "Asphalt"
+            "Distance": "1.1 miles",
+            "Surface": "Asphalt",
+            "Link": "https://www.traillink.com/trail/rose-canyon-bicycle-path/"
         }
     ]
 }
