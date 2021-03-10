@@ -10,6 +10,17 @@ header {
 
 .navbar-text {
     display: inline;
+    font-size: 4vw;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+h1.navbar-text {
+    display: inline;
+    font-size: 6vw;
+    font-weight: bold;
 }
 
 h1 {
