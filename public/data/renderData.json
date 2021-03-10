@@ -40,7 +40,7 @@
         },
         {
             "id": "help",
-            "path": "start_run",
+            "path": "help",
             "image": "https://img.icons8.com/carbon-copy/100/000000/help.png",
             "name": "Help"
         }
@@ -49,37 +49,37 @@
         {
             "id": "start-run",
             "image": "https://cdn.iconscout.com/icon/free/png-64/start-1438842-1214529.png",
-            "name": "Start Run"
+            "name": "\"Start Run\""
         },
         {
             "id": "finish-run",
             "image": "https://img.icons8.com/wired/64/000000/stop-sign.png",
-            "name": "Finish Run"
+            "name": "\"Finish Run\""
         },
         {
             "id": "decrease-volume",
             "image": "https://cdn2.iconfinder.com/data/icons/media-controls-7/24/icon-media-controls-decrease-volume-512.png",
-            "name": "Softer/ Mute"
+            "name": "\"Softer\"/ \"Mute\""
         },
         {
             "id": "increase-volume",
             "image": "https://static.thenounproject.com/png/3408653-200.png",
-            "name": "Louder"
+            "name": "\"Louder\""
         },
         {
             "id": "play-hype",
             "image": "https://cdn.iconscout.com/icon/free/png-128/hype-machine-739506.png",
-            "name": "Hype / Lets go"
+            "name": "\"Hype\" / \"Lets go\""
         },
         {
             "id": "skip-song",
             "image": "https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_skip_next_48px-512.png",
-            "name": "Skip"
+            "name": "\"Skip\""
         },
         {
             "id": "play-prev-song",
             "image": "https://cdn.iconscout.com/icon/free/png-128/back-1438835-1214522.png",
-            "name": "Back"
+            "name": "\"Back\""
         }
     ]
 }

@@ -13,7 +13,7 @@ var home = require('./routes/home');
 
 var settings = require('./routes/settings');
 
-var runScreen = require('./routes/runScreen');
+var help = require('./routes/help');
 var duringRun = require('./routes/duringRun');
 
 var finishedRun = require('./routes/finishedRun');
@@ -56,7 +56,7 @@ app.get('/settings', settings.view);
 app.post('/saveSettings', settings.saveSettings);
 app.get('/getHype', settings.getHype);
 
-app.get('/start_run', runScreen.view);
+app.get('/help', help.view);
 app.get('/during_run', duringRun.view);
 app.get('/finished_run', finishedRun.view);
 app.post('/finished_run', finishedRun.finishRun);
