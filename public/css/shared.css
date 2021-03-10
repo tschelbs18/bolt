@@ -102,3 +102,18 @@ body {
     background-color: #FFB563;
     border-color: #FFB563;
 }
+
+input[type=checkbox] {
+    margin-right: 0.5em;
+}
+
+.info-log {
+    flex: 1 0 40%;
+    margin: 0 2em;
+    width: 30%;
+}
+
+hr {
+    color: #233D4D;
+    border-color: #233D4D;
+}

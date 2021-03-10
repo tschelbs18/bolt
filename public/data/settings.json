@@ -31,15 +31,15 @@
         "audio_feedback": {
             "distance": {
                 "selected": true,
-                "description": "I want Bolt to tell me my total distance every kilometer/mile (feature coming soon!)"
+                "description": "Distance updates (WIP)"
             },
             "pace": {
                 "selected": true,
-                "description": "I want Bolt to tell me my pace at every kilometer/mile (feature coming soon!)"
+                "description": "Pace updates (WIP)"
             },
             "time": {
                 "selected": true,
-                "description": "I want Bolt to tell me every 10 minutes how long I've been running (feature coming soon!)"
+                "description": "Time updates (WIP)"
             }
         },
         "metric": {

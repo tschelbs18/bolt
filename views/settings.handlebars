@@ -47,13 +47,14 @@
             <br>
             <div id="audio-feedback">
             {{#each settings.audio_feedback}}
+                <div id="{{@key}}-container" class="form-group">
                 {{#if selected}}
-                    <input type="checkbox" id="{{@key}}" name="{{@key}}" checked="">
+                    <input type="checkbox" id="{{@key}}" name="{{@key}}" checked="" class="checkbox-inline">
                 {{else}}
-                    <input type="checkbox" id="{{@key}}" name="{{@key}}">
+                    <input type="checkbox" id="{{@key}}" name="{{@key}}" class="checkbox-inline">
                 {{/if}}
-                <label for="{{@key}}">{{description}}</label>
-                <br>
+                    <label for="{{@key}}">{{description}}</label>
+                </div>
             {{/each}}
             </div>
             <br>
