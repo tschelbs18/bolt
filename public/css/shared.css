@@ -77,10 +77,12 @@ h2 {
 #start-run-btn {
   width: 50%;
   height: 200px;
+  margin-top: 50%;
 }
 
-#routes-container {
-  
+.btn-toolbar {
+  margin-top: 30%;
+  margin-left: 25%;
 }
 
 .metrics {
