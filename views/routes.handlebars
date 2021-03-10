@@ -14,17 +14,21 @@
     <nav class="navbar navbar-default">
 		<a href="/home" class="navbar-text">< Back</a>
 		<h1 class="navbar-text">Nearby Routes</h1>
+    <img class="nav-logo" src="../images/bolt.png" alt="logo">
 	</nav>
 
-	<div class="container">
+	<div class="container" id="routes-container">
 		{{#each routes}}
     <div class="menu">
-      <h3>{{Name}}</h3>
+      <a href={{Link}}>
+        <h3>{{Name}}</h3>
+      </a>
       <ul>
         <li>Distance: {{Distance}}</li>
         <li>Surface: {{Surface}}</li>
       </ul>
     </div>
+    <hr>
 		{{/each}}
     <img src="/images/route_locations.JPG" alt="Routes">
 	</div>

@@ -10,5 +10,5 @@ exports.view = function(req, res){
         res.redirect('/');
     }
 
-    res.render('runScreen', { actions : renderData.runningActions });
+    res.render('help', { actions : renderData.runningActions });
 }

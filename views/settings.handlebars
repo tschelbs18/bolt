@@ -14,6 +14,7 @@
 	<nav class="navbar navbar-default">
 		<a href="/home" class="navbar-text">< Back</a>
 		<h1 class="navbar-text">Settings</h1>
+		<img class="nav-logo" src="../images/bolt.png" alt="logo">
 	</nav>
 
 	<div class="container">
@@ -57,7 +58,7 @@
             </div>
             <br>
             <div id="metric-selection">
-                <label for="distance">Select miles or kilometers for Bolt to track your distance</label>
+                <label for="distance">Select miles or kilometers for Bolt to track your distance (km coming soon!)</label>
                 <select name="distance" id="distance">
                 {{#each settings.metric}}
                     {{#if this}}
