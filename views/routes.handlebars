@@ -20,17 +20,19 @@
 	<div class="container" id="routes-container">
 		{{#each routes}}
     <div class="menu">
-      <a href={{Link}}>
-        <h3>{{Name}}</h3>
-      </a>
-      <ul>
-        <li>Distance: {{Distance}}</li>
-        <li>Surface: {{Surface}}</li>
-      </ul>
-    </div>
+    <a href={{Link}}>
+      <h3>{{Name}}</h3>
+    </a>
+    <ul>
+      <li>Distance: {{Distance}}</li>
+      <li>Surface: {{Surface}}</li>
+    </ul>
+    {{#unless @last}}
     <hr>
-		{{/each}}
-    <img src="/images/route_locations.JPG" alt="Routes">
+    {{/unless}}
+    </div>
+    {{/each}}
+    <img src="/images/route_locations.JPG" alt="Routes" class="img-responsive col-xs-12" style="margin: 2em;">
 	</div>
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="/js/bootstrap.min.js"></script>

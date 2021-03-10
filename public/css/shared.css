@@ -88,3 +88,17 @@ h2 {
 .metrics {
   text-align: center;
 }
+
+.navbar {
+    background: #233D4D;
+    border-color: #233D4D;
+}
+
+body {
+    background-color: #F85E00;
+}
+
+.thumbnail {
+    background-color: #FFB563;
+    border-color: #FFB563;
+}
