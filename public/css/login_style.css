@@ -108,3 +108,10 @@ span{
 .success {
   color: green;
 }
+#login-logo {
+  height: auto;
+  width: 10%;
+  position: absolute;
+  bottom: 10%;
+  right: 47%;
+}
