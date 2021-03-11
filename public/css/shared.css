@@ -95,13 +95,14 @@ h2 {
 }
 
 body {
-    background-color: #FFAA45;
+    /*background-color: #FFAA45;*/
 }
 
 .thumbnail {
-    background-color: cornsilk;
+    background-color: #FFAA45;
     border-color: black;
     border-radius: 20%;
+    border-width: medium;
 }
 
 input[type=checkbox] {
