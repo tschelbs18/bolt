@@ -2,33 +2,33 @@
     "testAccount": [
         {
             "Date": "02 / 12 / 2021",
-            "Time": "33:29",
+            "Time": "2009",
             "Distance": "3.81 miles",
-            "Pace": "8:47 per mile"
+            "Pace": "08:47 per mile"
         },
         {
             "Date": "02 / 13 / 2021",
-            "Time": "45:12",
+            "Time": "2712",
             "Distance": "9.43 miles",
-            "Pace": "4:48 per mile"
+            "Pace": "04:48 per mile"
         },
         {
             "Date": "02 / 15 / 2021",
-            "Time": "27:45",
+            "Time": "1665",
             "Distance": "3.90 miles",
-            "Pace": "7:07 per mile"
+            "Pace": "07:07 per mile"
         },
         {
             "Date": "02 / 20 / 2021",
-            "Time": "1:00:00",
-            "Distance": "6 miles",
+            "Time": "3600",
+            "Distance": "6.00 miles",
             "Pace": "10:00 per mile"
         },
         {
             "Date": "02 / 26 / 2021",
-            "Time": "19:00",
+            "Time": "1140",
             "Distance": "2.00 miles",
-            "Pace": "9:30 per mile"
+            "Pace": "09:30 per mile"
         }
     ]
 }
