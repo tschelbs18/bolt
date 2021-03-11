@@ -90,17 +90,18 @@ h2 {
 }
 
 .navbar {
-    background: #233D4D;
+    /*background: #233D4D;*/
     border-color: #233D4D;
 }
 
 body {
-    background-color: #F85E00;
+    background-color: #FFAA45;
 }
 
 .thumbnail {
-    background-color: #FFB563;
-    border-color: #FFB563;
+    background-color: cornsilk;
+    border-color: black;
+    border-radius: 20%;
 }
 
 input[type=checkbox] {
